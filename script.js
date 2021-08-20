@@ -106,7 +106,19 @@ document.getElementById('button-16').addEventListener('click',function(e){
 
 document.getElementById('button-19').addEventListener('click',function(e){
    b = document.getElementById('data').innerHTML;
-   console.log(b);
    let expression = a+" "+operator+" "+b;
+   console.log(expression);
    document.getElementById('data').innerHTML = eval(expression);
 })
+
+document.getElementById('button-3').addEventListener('click',function(e){
+    operator=document.getElementById('button-3').innerHTML;
+    a = document.getElementById('data').innerHTML;
+    document.getElementById('data').innerHTML = eval(a/100);
+ })
+
+ document.getElementById('button-2').addEventListener('click',function(e){
+    a = document.getElementById('data').innerHTML;
+    document.getElementById('data').innerHTML = eval(0-a);
+    a = eval(0-a);
+ })
